@@ -41,7 +41,7 @@ public class ExemploTest extends TestCase {
         //insere a senha
         driver.findElement(By.name("password")).sendKeys("master!@#" + Keys.ENTER);
 
-        aguardar(By.cssSelector("div[data-tooltip='Caixa de entrada']"), 8);
+        aguardar(By.cssSelector("div[data-tooltip='Caixa de entrada']"), 12);
 
 		assertTrue(driver.findElement(By.cssSelector("div[data-tooltip='Caixa de entrada']")) != null 
 		&& driver.findElement(By.cssSelector("div[aria-label='Principal'][role='tab']")) != null);
@@ -49,7 +49,7 @@ public class ExemploTest extends TestCase {
 		//clica no botão de enviar email
 		driver.findElement(By.cssSelector("div.aic div.z0 div[role='button']")).click();
 
-		aguardar(By.cssSelector("textarea[name='to']"), 8);
+		aguardar(By.cssSelector("textarea[name='to']"), 12);
 
 		//insere o destinatário
         driver.findElement(By.cssSelector("textarea[name='to']")).sendKeys("testeseleniumcatolica@gmail.com" + Keys.ENTER);
@@ -63,19 +63,19 @@ public class ExemploTest extends TestCase {
         //clica no botão de evniar
         driver.findElement(By.cssSelector("div[role='button'][aria-label='Enviar ‪(Ctrl-Enter)‬']")).click();
 
-		aguardar(By.cssSelector("div[role='tabpanel'] tbody>tr>td:nth-of-type(5) span[name='eu']"), 8);
+		aguardar(By.cssSelector("div[role='tabpanel'] tbody>tr>td:nth-of-type(5) span[name='eu']"), 12);
 
 		validar(1);
 		
 		//clica no botão de opções
 		driver.findElement(By.cssSelector("div[role='tabpanel'] tbody>tr>td:nth-of-type(6)")).click();
 
-		aguardar(By.cssSelector("div[role='button'][aria-label='Responder'][data-tooltip='Responder']"), 8);
+		aguardar(By.cssSelector("div[role='button'][aria-label='Responder'][data-tooltip='Responder']"), 12);
 
 		//seleciona a opção responder
 		driver.findElement(By.cssSelector("div[role='button'][aria-label='Responder'][data-tooltip='Responder']")).click();
 
-		aguardar(By.cssSelector("div[role='textbox'][aria-label='Corpo da mensagem']"), 8);
+		aguardar(By.cssSelector("div[role='textbox'][aria-label='Corpo da mensagem']"), 12);
 
 		//insere o texto de resposta
         driver.findElement(By.cssSelector("div[role='textbox'][aria-label='Corpo da mensagem']")).sendKeys("Ok, email lido. Obrigado.");
@@ -94,7 +94,7 @@ public class ExemploTest extends TestCase {
 				.contextClick(driver.findElement(By.cssSelector("div[role='tabpanel'] tbody>tr>td:nth-of-type(5)")))
 				.perform();
 
-		aguardar(By.cssSelector("body>div[role='menu']>div:nth-child(11)"), 8);
+		aguardar(By.cssSelector("body>div[role='menu']>div:nth-child(11)"), 12);
 
 		driver.findElement(By.cssSelector("body>div[role='menu']>div:nth-child(11)")).click();
 
